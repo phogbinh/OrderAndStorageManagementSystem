@@ -4,6 +4,7 @@
     {
         public const int DUMP_INTEGER = 0;
         public const string DUMP_STRING = "";
+        public const bool DUMP_BOOLEAN = false;
         public const string OUTPUT_ITEM_FILE_PATH = "InputInspectingElements.dll";
     }
 }

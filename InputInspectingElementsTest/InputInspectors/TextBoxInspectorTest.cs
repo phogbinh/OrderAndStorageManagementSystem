@@ -16,7 +16,7 @@ namespace InputInspectingElements.InputInspectors.Test
         /// </summary>
         public override bool IsValid()
         {
-            return true;
+            return TestDefinition.DUMP_BOOLEAN;
         }
 
         /// <summary>
@@ -24,7 +24,7 @@ namespace InputInspectingElements.InputInspectors.Test
         /// </summary>
         public override string GetError()
         {
-            return "";
+            return TestDefinition.DUMP_STRING;
         }
     }
 
@@ -70,24 +70,6 @@ namespace InputInspectingElements.InputInspectors.Test
             _textBoxInspector.Set("text", 0);
             Assert.AreEqual(( string )_target.GetFieldOrProperty(MEMBER_VARIABLE_NAME_TEXT), "text");
             Assert.AreEqual(( int )_target.GetFieldOrProperty(MEMBER_VARIABLE_NAME_MAX_TEXT_LENGTH), 0);
-        }
-
-        /// <summary>
-        /// Tests the is valid.
-        /// </summary>
-        [TestMethod()]
-        public void TestIsValid()
-        {
-            Assert.IsTrue(_textBoxInspector.IsValid());
-        }
-
-        /// <summary>
-        /// Tests the get error.
-        /// </summary>
-        [TestMethod()]
-        public void TestGetError()
-        {
-            Assert.AreEqual(_textBoxInspector.GetError(), "");
         }
     }
 }
